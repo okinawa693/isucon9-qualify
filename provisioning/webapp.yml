@@ -1,6 +1,8 @@
 - hosts: webapp
-  user: root
+  user: ubuntu
   gather_facts: yes
+  become: yes
+  become_user: root
 
   roles:
     - user.isucon
@@ -11,19 +13,19 @@
     - nginx
     - mysql
     - golang
-    - perl
-    - php
-    - ruby
-    - python
-    - nodejs
+    # - perl
+    # - php
+    # - ruby
+    # - python
+    # - nodejs
     - webapp.mysql
     - webapp.golang
-    - webapp.perl
-    - webapp.php
-    - webapp.ruby
-    - webapp.python
-    - webapp.nodejs
-    - webapp.nginx
+    # - webapp.perl
+    # - webapp.php
+    # - webapp.ruby
+    # - webapp.python
+    # - webapp.nodejs
+    # - webapp.nginx
 
   tasks:
     - name: Start default daemons

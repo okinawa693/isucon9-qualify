@@ -24,6 +24,7 @@
     'libpng-dev',
     'libtidy-dev',
     'libffi-dev',
+    'locales-all'
     ]
     state: present
     update_cache: yes

@@ -1,6 +1,9 @@
 - hosts: bench
-  user: root
+  user: ubuntu
+  # user: root
   gather_facts: yes
+  become: yes
+  become_user: root
   vars:
     golang_version: 1.13
 
